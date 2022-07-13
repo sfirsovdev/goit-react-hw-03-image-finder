@@ -12,6 +12,7 @@ import { AppContainer } from './App.styled';
 import fetchApi from '../service/ApiService';
 import Spiner from './loader/Loader';
 import Modal from './modal/Modal';
+import { scrollToDown } from 'utils/utils';
 
 axios.defaults.baseURL = 'https://pixabay.com/api/';
 export default class App extends Component {
@@ -80,7 +81,7 @@ export default class App extends Component {
   loadMore = () => {
     this.setState(prevState => ({
       page: prevState.page + 1,
-    }));
+    }),() => scrollToDown());
 
     window.scrollTo({
       top: document.documentElement.scrollHeight - 90,
