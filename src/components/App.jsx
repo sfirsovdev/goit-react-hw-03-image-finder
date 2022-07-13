@@ -9,7 +9,7 @@ import SearhBar from './searchBar/SearchBar';
 import ImageGallery from './image-gallery/ImageGallery';
 import LoadMoreButton from './button/Button';
 import { AppContainer } from './App.styled';
-import fetchApi from '../components/service/ApiService';
+import fetchApi from '../service/ApiService';
 import Spiner from './loader/Loader';
 import Modal from './modal/Modal';
 
@@ -88,6 +88,7 @@ export default class App extends Component {
     });
   };
 
+  
   closeModal = () => {
     this.setState({
       selectedImage: null,
