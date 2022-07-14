@@ -6,7 +6,7 @@ import { Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import SearhBar from './searchBar/SearchBar';
-import ImageGallery from './image-gallery/ImageGallery';
+import ImageGallery from './image/image-gallery/ImageGallery';
 import LoadMoreButton from './button/Button';
 import { AppContainer } from './App.styled';
 import fetchApi from '../service/ApiService';
@@ -83,10 +83,6 @@ export default class App extends Component {
       page: prevState.page + 1,
     }),() => scrollToDown());
 
-    window.scrollTo({
-      top: document.documentElement.scrollHeight - 90,
-      behavior: 'smooth',
-    });
   };
 
   
